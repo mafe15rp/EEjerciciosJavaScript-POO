@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variable numeroDeElementos</h1>
+    <p>Ingrese el numero de elementos que desee para la serie Fibonacci:</p>
+    <input type="number" id="inputnumeroDeElementos">
+    <button onclick="GenerarSerieFibonacci">Generar Serie </button>
+
+    <script> 
+    const numeroDeElementos = parseInt(document.getElementById('inputNumeroDeElementos').value);
+    if (isNaN(numeroDeElementos) || numeroDeElementos <= 0) {
+                console.error("Por favor ingresa un número válido de elementos para la serie.");
+                return;
+    }
+                let a = 0, b = 1;
+                console.log(a);
+                console.log(b);
+                let count = 2;
+            while (count < numeroDeElementos) {
+                const c = a + b;
+                console.log(c);
+                a = b;
+                b = c;
+                count++;
+            }
+        
+    </script>
+</body>
+</html>
